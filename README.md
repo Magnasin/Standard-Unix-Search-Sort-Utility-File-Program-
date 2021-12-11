@@ -1,4 +1,5 @@
-# Standard-Unix-Search-Sort-Utility-File-Program-
+# Standard-Unix-Search-Sort-Utility-File-Program
+
 Used to implement functions by chaining the standard Unix utility programs. In particular, the program is used to produce searches in an input file, selects the lines that match a given regular expression, and sorts the matched lines in reverse order.
 
 The program takes in three arguments:
