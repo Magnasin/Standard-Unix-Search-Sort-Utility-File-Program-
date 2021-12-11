@@ -6,13 +6,8 @@ The program takes in three arguments:
 $ ./grepsort PATTERN INPUTFILE OUTPUTFILE
 
 Where PATTERN is a simple string or a simple regular expression. INPUTFILE is the name of the input file, and OUTPUTFILE is the name of the output file for the result.
-You are not expected to implement the specific functions, such as matching a regular expression or sorting the lines in reverse order. Rather, you should be using existing Unix utility programs:
 
-grep is a utility program which is a file pattern searcher. It takes one command-line argument (the PATTERN string in our case) and search for matches line by line from the standard input (or the file specified as the second command-line argument). When a match is found (a line that matches with the PATTERN string), the program prints the line to the standard output. The utility program outputs all matched lines.
-
-sort is a utility program that sorts the text file by lines. By default, it reads from the standard input and generates the sorted text to the standard output. Use -r option to sort in reverse order. 
-
-Program uses fork and exec system calls to run the utility programs. You should also use pipe and dup/dup2 system calls to connect them, so that, for example, the standard output of the grep program is "piped" to the standard input of the sort program.
+Program uses fork and exec system calls to run the utility programs. Uses pipe and dup/dup2 system calls to connect them, so that, for example, the standard output of the grep program is "piped" to the standard input of the sort program.
 
 Implementation
 You are advised to follow the steps below in your implementation:
